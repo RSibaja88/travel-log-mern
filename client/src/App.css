@@ -1,0 +1,21 @@
+/* 
+.marker {
+  stroke: 1px #ff7403ff;
+} */
+
+.marker {
+  transform: translate(-50%, -100%);
+  -webkit-transform: translate(-50%, -100%);
+  -moz-transform: translate(-50%, -100%);
+  -ms-transform: translate(-50%, -100%);
+  -o-transform: translate(-50%, -100%);
+}
+
+.mapboxgl-map {
+  /* border: 3px solid green; */
+  margin: 0;
+}
+
+.App {
+  margin: 0;
+}
