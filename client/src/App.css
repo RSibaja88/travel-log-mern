@@ -1,7 +1,6 @@
-/* 
-.marker {
-  stroke: 1px #ff7403ff;
-} */
+.App {
+  margin: 0;
+}
 
 .marker {
   transform: translate(-50%, -100%);
@@ -16,6 +15,66 @@
   margin: 0;
 }
 
-.App {
+.popCard {
+  display: flex;
+  flex-direction: row;
+  max-width: 420px;
+  background-color: rgba(200, 201, 200, 0);
+  margin: 1px;
+  padding: 0;
+}
+
+.blockOne {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5%;
+  border: 3px solid red;
+}
+
+.blockTwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 1.5%;
+  border: 3px solid green;
+}
+
+.popPic {
+  max-width: 220px;
+}
+
+p {
+  text-align: center;
+}
+.header {
+  z-index: 1;
+  position: absolute;
+  background-color: rgba(248, 248, 248, 0.829);
+  width: 100vw;
+}
+.mapboxgl-popup-content {
+  position: relative;
+  background-color: rgba(200, 201, 200, 0.527) !important;
+  padding: 0;
   margin: 0;
+  pointer-events: auto;
+  border-radius: 5px !important;
+  -webkit-border-radius: 5px !important;
+  -moz-border-radius: 5px !important;
+  -ms-border-radius: 5px !important;
+  -o-border-radius: 5px !important;
+}
+
+.mapboxgl-popup-tip {
+  border-color: rgba(200, 201, 200, 0) !important;
+}
+
+.mapboxgl-popup-close-button {
+  color: rgb(0, 10, 43) !important;
+  margin: 10px !important;
+  font: 400 24px Arial !important;
+  text-shadow: -1.25px 0px 1.65px rgba(0, 0, 0, 0.466);
 }

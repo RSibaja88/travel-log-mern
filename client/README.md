@@ -10,4 +10,7 @@ Front End Process:
 -Pulled entry in as props from the Log Entries and the map markers displayed in the correct coordinates
 -Set up Pop Up modal using reac-map-gl
 -ShowPopup state
--made adjustment to MB's code to close properly and reformatted the Date display
+-made adjustment to MapBox's code to close properly and reformatted the Date display
+-Created form for travel log entry using react hook form
+
+-
