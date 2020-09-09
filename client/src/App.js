@@ -17,9 +17,9 @@ const App = () => {
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "100vh",
-    latitude: 34.901973,
-    longitude: -45.608356,
-    zoom: 3.55,
+    latitude: 32.306826,
+    longitude: -34.750677,
+    zoom: 1.35,
   });
 
   const getEntries = async () => {
@@ -67,8 +67,8 @@ const App = () => {
                 <svg
                   className="marker"
                   style={{
-                    height: `${8 * viewport.zoom}px`,
-                    width: `${8 * viewport.zoom}px`,
+                    height: `${10 * viewport.zoom}px`,
+                    width: `${10 * viewport.zoom}px`,
                   }}
                   height="20"
                   viewBox="0 0 64 64"
@@ -98,26 +98,33 @@ const App = () => {
                 anchor="top"
               >
                 <div className="popCard">
-                  <div className="blockOne">
-                    <h3 className="poptitle">{entry.title}</h3>
-                    <img className="popPic" src={entry.image} />
-                    <p className="popRating">Rating: {entry.rating}</p>
+                  <div className="floatbox">
+                    <div className="longlat">
+                      longitude: {entry.longitude} || latitude: {entry.latitude}
+                    </div>
                   </div>
-                  <div className="blockTwo">
-                    <h3>About the Trip</h3>
-                    <p className="popDescription">{entry.description}</p>
-                    <p className="popRating">
-                      Date visted: {entry.visit_date.substring(0, 10)}
-                    </p>
-                    <button
-                      onClick={() => {
-                        deleteEntries(entry._id);
-                        console.log("update state: ", getEntries());
-                        //console log is to rerender with the use of useEffect
-                      }}
-                    >
-                      Delete
-                    </button>
+                  <div className="infoBox">
+                    <div className="blockOne">
+                      <h3 className="poptitle">{entry.title}</h3>
+                      <img className="popPic" src={entry.image} />
+                      <p className="popRating">Rating: {entry.rating}</p>
+                    </div>
+                    <div className="blockTwo">
+                      <h3>About the Trip</h3>
+                      <p className="popDescription">{entry.description}</p>
+                      <p className="popRating">
+                        Date visted: {entry.visit_date.substring(0, 10)}
+                      </p>
+                      <button
+                        onClick={() => {
+                          deleteEntries(entry._id);
+                          getEntries();
+                          //updates existing entries to reflect changes
+                        }}
+                      >
+                        Delete
+                      </button>
+                    </div>
                   </div>
                 </div>
               </Popup>
@@ -165,14 +172,20 @@ const App = () => {
               latitude={addEntry.latitude}
               longitude={addEntry.longitude}
               closeButton={true}
-              closeOnClick={true}
+              closeOnClick={false}
               dynamicPosition={true}
               sortByDepth={true}
-              // onClose={() => setAddEntry(null)}
+              onClose={() => setAddEntry(null)}
               anchor="top"
             >
               <div className="popCard2">
-                <NewEntryForm location={addEntry} />
+                <NewEntryForm
+                  onClose={() => {
+                    setAddEntry(null);
+                    getEntries();
+                  }}
+                  location={addEntry}
+                />
               </div>
             </Popup>
           </>

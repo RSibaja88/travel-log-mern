@@ -17,11 +17,21 @@
 
 .popCard {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   max-width: 420px;
   background-color: rgba(200, 201, 200, 0);
   margin: 1px;
   padding: 0;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: row;
+  border: 3px solid aqua;
+}
+
+.longlat {
+  font-size: 8pt;
 }
 
 .blockOne {
