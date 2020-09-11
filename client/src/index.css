@@ -13,6 +13,30 @@ body {
   overflow: hidden;
 }
 
+@font-face {
+  font-family: "Pettingill";
+  src: local("Pettingill"),
+    url(./fonts/PettingillCF-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Yanone";
+  src: local("Yanone"),
+    url(./fonts/YanoneKaffeesatz-Bold.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "YanoneReg";
+  src: local("YanoneReg"),
+    url(./fonts/YanoneKaffeesatz-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "YanoneLight";
+  src: local("YanoneLight"),
+    url(./fonts/YanoneKaffeesatz-Light.otf) format("opentype");
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

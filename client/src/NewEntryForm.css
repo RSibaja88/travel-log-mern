@@ -1,0 +1,51 @@
+.entryForm {
+  font-family: Yanone;
+  font-size: 16pt;
+}
+
+.submitButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 19, 82);
+  font-family: Yanone;
+  font-size: 16pt;
+  margin-top: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 2%;
+
+  border: 2px solid rgba(184, 144, 0, 0.836);
+  background: rgb(255, 246, 212);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(255, 246, 212, 1) 18%,
+    rgba(208, 164, 0, 1) 88%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(255, 246, 212, 1) 18%,
+    rgba(208, 164, 0, 1) 88%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(255, 246, 212, 1) 18%,
+    rgba(208, 164, 0, 1) 88%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff6d4",endColorstr="#d0a400",GradientType=1);
+  -webkit-box-shadow: 0px 5px 8px -3px #000000;
+  box-shadow: 0px 5px 8px -3px #000000;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+textarea,
+input {
+  -webkit-box-shadow: inset -2px 3px 4px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: inset -2px 3px 4px 0px rgba(0, 0, 0, 0.6);
+  border: none;
+  font-family: YanoneLight;
+}

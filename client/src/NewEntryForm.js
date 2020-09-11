@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { createEntry } from "./API";
+import "./NewEntryForm.css";
 
 const NewEntryForm = ({ location, onClose }) => {
   const [loading, setLoading] = useState(false);
@@ -35,7 +36,7 @@ const NewEntryForm = ({ location, onClose }) => {
       <input name="rating" type="number" ref={register} />
       <label htmlFor="visit_date">Date Visited: </label>
       <input name="visit_date" type="date" required ref={register} />
-      <button disabled={loading}>
+      <button className="submitButton" disabled={loading}>
         {loading ? "Pending Details" : "Submit Travel Log"}
       </button>
     </form>

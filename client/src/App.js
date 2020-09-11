@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import { listEntries, deleteEntries } from "./API";
 import NewEntryForm from "./NewEntryForm";
+import WitW from "./img/noBrassGradientWitW1.png";
 
 import "./App.css";
 
@@ -18,8 +19,8 @@ const App = () => {
     width: "100vw",
     height: "100vh",
     latitude: 32.306826,
-    longitude: -34.750677,
-    zoom: 1.35,
+    longitude: -41.750677,
+    zoom: 2.25,
   });
 
   const getEntries = async () => {
@@ -41,7 +42,20 @@ const App = () => {
 
   return (
     <section className="mapSection">
-      <div className="header">This is my header</div>
+      <div className="header">
+        <div className="boxes">
+          <div className="aboutTitle">About</div>This app serves as a personal
+          travel log. An interactive journal of "Where in the World" I've been
+          able to visit. Click the map markers for more details about my trip.
+        </div>
+        <img src={WitW} className="witwLogo" />
+        <div className="boxes">
+          <div className="aboutTitle">Try it Out!</div>If you'd like to add a
+          travel log of your own, double-click the location and submit. If you
+          don't want to leave it on the map, you can always delete your
+          submission.
+        </div>
+      </div>
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken={MapboxToken}
@@ -50,7 +64,7 @@ const App = () => {
         onDblClick={showAddMarkerPopup}
       >
         {logEntries.map((entry) => (
-          <div className="mapGroup">
+          <div className="mapGroup" key={entry._id}>
             <Marker
               key={entry._id}
               latitude={entry.latitude}
@@ -110,12 +124,13 @@ const App = () => {
                       <p className="popRating">Rating: {entry.rating}</p>
                     </div>
                     <div className="blockTwo">
-                      <h3>About the Trip</h3>
+                      <div className="entryTitle">About the Trip</div>
                       <p className="popDescription">{entry.description}</p>
-                      <p className="popRating">
+                      <p className="popDate">
                         Date visted: {entry.visit_date.substring(0, 10)}
                       </p>
                       <button
+                        className="deleteButton"
                         onClick={() => {
                           deleteEntries(entry._id);
                           getEntries();
