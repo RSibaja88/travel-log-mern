@@ -24,10 +24,6 @@
   padding: 0;
 }
 
-.floatbox {
-  /* border: 3px solid fuchsia; */
-}
-
 .infoBox {
   display: flex;
   flex-direction: row;
@@ -71,7 +67,7 @@
 }
 
 .popPic {
-  max-width: 95%;
+  max-width: 94%;
   border-radius: 7.5px;
   -webkit-border-radius: 7.5px;
   -moz-border-radius: 7.5px;
@@ -108,29 +104,17 @@ p {
 }
 
 .deleteButton {
-  color: rgb(0, 19, 82);
+  color: rgb(0, 10, 43);
   font-family: Yanone;
   font-size: 17pt;
   padding-left: 15%;
   padding-right: 15%;
   border: 2px solid rgba(184, 144, 0, 0.836);
   background: rgb(255, 246, 212);
-  background: -moz-radial-gradient(
-    circle,
-    rgba(255, 246, 212, 1) 18%,
-    rgba(208, 164, 0, 1) 88%
-  );
-  background: -webkit-radial-gradient(
-    circle,
-    rgba(255, 246, 212, 1) 18%,
-    rgba(208, 164, 0, 1) 88%
-  );
-  background: radial-gradient(
-    circle,
-    rgba(255, 246, 212, 1) 18%,
-    rgba(208, 164, 0, 1) 88%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff6d4",endColorstr="#d0a400",GradientType=1);
+  background: -moz-radial-gradient( circle, rgba(255, 246, 212, 1) 18%, rgba(208, 164, 0, 1) 88%);
+  background: -webkit-radial-gradient( circle, rgba(255, 246, 212, 1) 18%, rgba(208, 164, 0, 1) 88%);
+  background: radial-gradient( circle, rgba(255, 246, 212, 1) 18%, rgba(208, 164, 0, 1) 88%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#fff6d4", endColorstr="#d0a400", GradientType=1);
   -webkit-box-shadow: 0px 5px 8px -3px #000000;
   box-shadow: 0px 5px 8px -3px #000000;
   border-radius: 25px;
@@ -150,25 +134,11 @@ p {
 .header {
   z-index: 1;
   position: absolute;
-  background: rgb(255, 255, 255);
-  background: -moz-linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0) 18%,
-    rgba(195, 223, 255, 0.9164040616246498) 60%
-  );
-  background: -webkit-linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0) 18%,
-    rgba(195, 223, 255, 0.9164040616246498) 60%
-  );
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0) 18%,
-    rgba(195, 223, 255, 0.9164040616246498) 60%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#c3dfff",GradientType=1);
-  width: 100vw;
-  /* height: 165px; */
+  background-image: url("./img/leathertile.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+  -webkit-box-shadow: 0px 8px 16px -2px #000000;
+  box-shadow: 0px 8px 16px -2px #000000;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -176,20 +146,22 @@ p {
 
 .aboutTitle {
   font-family: Pettingill;
-  font-size: 3rem;
-  color: #fdf077;
-  text-shadow: 0px 2.5px 4px rgba(88, 88, 88, 0.925);
-  -webkit-text-stroke: 1.35px #8b7e00;
+  font-size: 2.5rem;
+  color: #d39b39ff;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.836);
+  /* border: 3px solid purple; */
 }
 
 .witwLogo {
   max-width: 14rem;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 20px;
+  margin-bottom: 45px;
   /*border: 3px solid green;
   */
   padding: 0;
 }
+
+
 /* MEDIA QUERY 480px for MAX WIDTH!!!!*/
 
 .boxes {
@@ -199,16 +171,31 @@ p {
   margin-top: 2px;
   padding: 5px;
   padding-top: 0px;
-  max-width: 32%;
+  max-width: 28%;
   justify-content: center;
   align-items: center;
   text-align: center;
   font-family: Yanone;
-  font-size: 13.5pt;
+  font-size: 16pt;
   /* border: 3px solid red; */
-  text-shadow: 0px 2px 3px rgba(88, 88, 88, 0.342);
-  color: rgb(0, 31, 116);
-  -webkit-text-stroke: 0.25px rgb(0, 15, 63);
+  text-shadow: 0px 2px 6px rgba(10, 10, 10, 0.904);
+  color: rgb(220, 229, 252);
+}
+
+.headerWords {
+  background-image: url("./img/bronze-metal-textureDeep.jpg");
+  background-size: cover;
+  text-shadow: 0px 2px 2px #000000;
+  background-repeat: no-repeat;
+  border-radius: 3px;
+  padding: 3%;
+  /*border: 3px solid blue;
+  */
+  margin: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
 }
 
 .mapboxgl-popup-content {
@@ -233,4 +220,236 @@ p {
   margin: 10px !important;
   font: 400 24px Arial !important;
   text-shadow: -1.25px 0px 1.65px rgba(0, 0, 0, 0.466);
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1024px) {
+  /* start of large tablet styles */
+  .boxes {
+    margin: 12px;
+    margin-top: 5px;
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 4%;
+    max-width: 30%;
+    font-size: 15pt;
+    text-shadow: 0px 2px 6px rgba(10, 10, 10, 0.904);
+    color: rgb(220, 229, 252);
+  }
+  .popCard {
+    display: flex;
+    flex-direction: column;
+    max-width: 275px;
+    margin: 5px;
+  }
+  .infoBox {
+    display: flex;
+    flex-direction: row;
+    /* border: 3px solid aqua; */
+  }
+  .longlat {
+    font-size: 6.35pt;
+    text-shadow: 0px 0px 0px rgba(88, 88, 88, 0);
+    color: rgb(0, 7, 31);
+  }
+  .blockOne {
+    width: 55%;
+    margin-right: 1.5%;
+  }
+  .poptitle {
+    font-size: 19pt;
+  }
+  .blockTwo {
+    width: 40%;
+    text-align: center;
+    font-family: Yanone;
+  }
+  .popRating {
+    font-size: 16pt;
+    margin-top: 10%;
+  }
+  p {
+    text-align: center;
+  }
+  .popDescription {
+    font-size: 10pt;
+    text-shadow: 0px 1px 1.5px rgba(88, 88, 88, 0.822);
+  }
+  .popDate {
+    font-size: 8pt;
+    padding-top: 10%;
+    padding-bottom: 0%;
+  }
+  .deleteButton {
+    font-size: 17pt;
+    margin-top: 15%;
+  }
+  .entryTitle {
+    font-size: 17pt;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* start of medium tablet styles */
+  .aboutTitle {
+    font-size: 1.25rem;
+  }
+  .witwLogo {
+    max-width: 12.05rem;
+    margin-top: 2rem;
+  }
+  .boxes {
+    margin-top: 3px;
+    padding: 15px;
+    padding-top: 2px;
+    padding-bottom: 5%;
+    max-width: 20%;
+    font-size: 12pt;
+    font-family: YanoneReg;
+    /* border: 3px solid red; */
+    color: rgb(218, 228, 255);
+  }
+  .headerWords {
+    margin-bottom: 1.5rem;
+    padding-bottom: 4.5%;
+  }
+  .popCard {
+    display: flex;
+    flex-direction: column;
+    max-width: 275px;
+    margin: 5px;
+  }
+  .infoBox {
+    display: flex;
+    flex-direction: row;
+    /* border: 3px solid aqua; */
+  }
+  .longlat {
+    font-size: 6.35pt;
+    text-shadow: 0px 0px 0px rgba(88, 88, 88, 0);
+    color: rgb(0, 7, 31);
+  }
+  .blockOne {
+    width: 55%;
+    margin-right: 1.5%;
+  }
+  .poptitle {
+    font-size: 19pt;
+  }
+  .blockTwo {
+    width: 40%;
+    text-align: center;
+    font-family: Yanone;
+  }
+  .popRating {
+    font-size: 16pt;
+    margin-top: 10%;
+  }
+  p {
+    text-align: center;
+  }
+  .popDescription {
+    font-size: 10pt;
+    text-shadow: 0px 1px 1.5px rgba(88, 88, 88, 0.822);
+  }
+  .popDate {
+    font-size: 8pt;
+    padding-top: 10%;
+    padding-bottom: 0%;
+  }
+  .deleteButton {
+    font-size: 17pt;
+    margin-top: 15%;
+  }
+  .entryTitle {
+    font-size: 17pt;
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* start of phone styles */
+  .aboutTitle {
+    font-size: 1.2rem;
+  }
+  .witwLogo {
+    max-width: 7.5rem;
+    padding-top: 1rem;
+  }
+  .boxes {
+    margin-top: 3px;
+    padding: 5px;
+    padding-top: 0;
+    padding-bottom: 3%;
+    max-width: 40%;
+    font-size: 9.5pt;
+    font-family: YanoneLight;
+  }
+  .popCard {
+    display: flex;
+    flex-direction: column;
+    max-width: 205px;
+    margin: 5px;
+  }
+  .infoBox {
+    display: flex;
+    flex-direction: row;
+    /* border: 3px solid aqua; */
+  }
+  .longlat {
+    font-size: 4.9pt;
+    text-shadow: 0px 0px 0px rgba(88, 88, 88, 0);
+    color: rgb(0, 7, 31);
+  }
+  .blockOne {
+    width: 45%;
+    margin-right: 1.5%;
+  }
+  .poptitle {
+    font-size: 13pt;
+  }
+  .blockTwo {
+    width: 50%;
+    text-align: center;
+    font-family: Yanone;
+  }
+  .popPic {
+    max-width: 98%;
+  }
+  .popRating {
+    font-size: 9pt;
+    margin-top: 10%;
+  }
+  p {
+    text-align: center;
+  }
+  .popDescription {
+    font-size: 9pt;
+    text-shadow: 0px 1px 1.5px rgba(88, 88, 88, 0.822);
+  }
+  .popDate {
+    font-size: 8pt;
+    padding-top: 10%;
+    padding-bottom: 0%;
+  }
+  .deleteButton {
+    font-size: 12pt;
+    margin-top: 15%;
+  }
+  .entryTitle {
+    font-size: 12pt;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 0;
+  }
 }

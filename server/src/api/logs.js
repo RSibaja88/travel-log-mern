@@ -37,9 +37,10 @@ router.post("/", async (req, res, next) => {
   console.log(req.body);
 });
 
-router.delete("/:logId", async (req, res) => {
+router.delete("/:id", async (req, res) => {
+  const id = req.params.id;
   try {
-    const removedLog = await LogEntry.remove({ _id: req.params.logId });
+    const removedLog = await LogEntry.remove({ _id: req.params.id });
     res.json(removedLog);
   } catch (error) {
     res.json({ message: error });

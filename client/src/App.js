@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactMapGL, { Marker, Popup } from "react-map-gl";
 import { listEntries, deleteEntries } from "./API";
 import NewEntryForm from "./NewEntryForm";
-import WitW from "./img/noBrassGradientWitW1.png";
+import WitW from "./img/goldWhereWorld.png";
 
 import "./App.css";
 
@@ -18,9 +18,9 @@ const App = () => {
   const [viewport, setViewport] = useState({
     width: "100vw",
     height: "100vh",
-    latitude: 32.306826,
-    longitude: -41.750677,
-    zoom: 2.25,
+    latitude: 46.306826,
+    longitude: -56.750677,
+    zoom: 2,
   });
 
   const getEntries = async () => {
@@ -44,22 +44,31 @@ const App = () => {
     <section className="mapSection">
       <div className="header">
         <div className="boxes">
-          <div className="aboutTitle">About</div>This app serves as a personal
-          travel log. An interactive journal of "Where in the World" I've been
-          able to visit. Click the map markers for more details about my trip.
+          <div className="aboutTitle">About</div>
+          <div className="insetShad">
+            <p className="headerWords">
+              This app serves as a personal travel log. An interactive journal
+              of "Where in the World" I've been able to visit. Click the map
+              markers for more details about my trip.
+            </p>
+          </div>
         </div>
         <img src={WitW} className="witwLogo" />
         <div className="boxes">
-          <div className="aboutTitle">Try it Out!</div>If you'd like to add a
-          travel log of your own, double-click the location and submit. If you
-          don't want to leave it on the map, you can always delete your
-          submission.
+          <div className="aboutTitle">Try it Out!</div>
+          <div className="insetShad">
+            <p className="headerWords">
+              If you'd like to add a travel log of your own, double-click the
+              location and submit. If you don't want to leave it on the map, you
+              can always delete your submission.
+            </p>
+          </div>
         </div>
       </div>
       <ReactMapGL
         {...viewport}
         mapboxApiAccessToken={MapboxToken}
-        mapStyle="mapbox://styles/rssibaja88/ckerw92o53xjo19r8kg8z92kg"
+        mapStyle="mapbox://styles/rssibaja88/ckf32i7yw0a4a19rxfmrru6io"
         onViewportChange={setViewport}
         onDblClick={showAddMarkerPopup}
       >

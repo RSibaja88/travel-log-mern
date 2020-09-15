@@ -12,5 +12,7 @@ Front End Process:
 -ShowPopup state
 -made adjustment to MapBox's code to close properly and reformatted the Date display
 -Created form for travel log entry using react hook form
-
--
+-Entry updates state and rerenders to reflect submission
+-Delete function added and also updates state to reflect submission
+-Styling and responsiveness
+-Deployment.
