@@ -10,7 +10,7 @@ const logs = require("./api/logs");
 
 const app = express();
 
-mongoose.connect(process.env.DATABASE_URL, {
+mongoose.connect(process.env.MONGODB_URI || process.env.DATABASE_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -23,6 +23,10 @@ app.use(
   })
 );
 app.use(express.json()); //body parsing mw
+
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 app.get("/", (req, res) => {
   res.json({
