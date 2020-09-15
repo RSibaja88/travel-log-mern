@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2b42e405.chunk.css",
+    "main.js": "/static/js/main.00a62c29.chunk.js",
+    "main.js.map": "/static/js/main.00a62c29.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
+    "static/js/2.bbc9e1b2.chunk.js": "/static/js/2.bbc9e1b2.chunk.js",
+    "static/js/2.bbc9e1b2.chunk.js.map": "/static/js/2.bbc9e1b2.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.46103cd90c2d845c5a96cb57857a8205.js": "/precache-manifest.46103cd90c2d845c5a96cb57857a8205.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.2b42e405.chunk.css.map": "/static/css/main.2b42e405.chunk.css.map",
+    "static/js/2.bbc9e1b2.chunk.js.LICENSE.txt": "/static/js/2.bbc9e1b2.chunk.js.LICENSE.txt",
+    "static/media/PettingillCF-Bold.otf": "/static/media/PettingillCF-Bold.ffeb15ed.otf",
+    "static/media/YanoneKaffeesatz-Bold.otf": "/static/media/YanoneKaffeesatz-Bold.13be9a83.otf",
+    "static/media/YanoneKaffeesatz-Light.otf": "/static/media/YanoneKaffeesatz-Light.f607fb59.otf",
+    "static/media/YanoneKaffeesatz-Regular.otf": "/static/media/YanoneKaffeesatz-Regular.62b6a705.otf",
+    "static/media/App.css": "/static/media/leathertile.775c91f9.png",
+    "static/media/goldWhereWorld.png": "/static/media/goldWhereWorld.80d956eb.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.09b85ec0.js",
+    "static/js/2.bbc9e1b2.chunk.js",
+    "static/css/main.2b42e405.chunk.css",
+    "static/js/main.00a62c29.chunk.js"
+  ]
+}
