@@ -9,3 +9,5 @@ Travel Log app using MERN stack.
 -created schema with mongoose
 
 -created GET, GET by ID, POST, and DELETE endpoint routes for the Express API and tested in Postman
+
+-deploy to heroku
