@@ -1,0 +1,20 @@
+{
+  "name": "travel-log-mern",
+  "version": "1.0.0",
+  "description": "If you delete an existing travel entry, you can add it again using these params.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RSibaja88/travel-log-mern.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RSibaja88/travel-log-mern/issues"
+  },
+  "homepage": "https://github.com/RSibaja88/travel-log-mern#readme"
+}
