@@ -49,7 +49,7 @@ const App = () => {
             <p className="headerWords">
               This app serves as a personal travel log. An interactive journal
               of "Where in the World" I've been able to visit. Click the map
-              markers for more details about my trip.
+              markers for more details about my trip!
             </p>
           </div>
         </div>
@@ -58,9 +58,9 @@ const App = () => {
           <div className="aboutTitle">Try it Out!</div>
           <div className="insetShad">
             <p className="headerWords">
-              If you'd like to add a travel log of your own, double-click the
-              location and submit. If you don't want to leave it on the map, you
-              can always delete your submission.
+              If you'd like to add a travel log, double-click the location and
+              submit. If you don't want to leave it on the map, you can always
+              delete your submission.
             </p>
           </div>
         </div>
