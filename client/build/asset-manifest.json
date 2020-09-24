@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.2b42e405.chunk.css",
-    "main.js": "/static/js/main.00a62c29.chunk.js",
-    "main.js.map": "/static/js/main.00a62c29.chunk.js.map",
+    "main.css": "/static/css/main.9c9778bf.chunk.css",
+    "main.js": "/static/js/main.ec2147d8.chunk.js",
+    "main.js.map": "/static/js/main.ec2147d8.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.09b85ec0.js",
     "runtime-main.js.map": "/static/js/runtime-main.09b85ec0.js.map",
     "static/js/2.bbc9e1b2.chunk.js": "/static/js/2.bbc9e1b2.chunk.js",
     "static/js/2.bbc9e1b2.chunk.js.map": "/static/js/2.bbc9e1b2.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.46103cd90c2d845c5a96cb57857a8205.js": "/precache-manifest.46103cd90c2d845c5a96cb57857a8205.js",
+    "precache-manifest.aa52a687f20bb088e8ca05c92eb7d9e3.js": "/precache-manifest.aa52a687f20bb088e8ca05c92eb7d9e3.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.2b42e405.chunk.css.map": "/static/css/main.2b42e405.chunk.css.map",
+    "static/css/main.9c9778bf.chunk.css.map": "/static/css/main.9c9778bf.chunk.css.map",
     "static/js/2.bbc9e1b2.chunk.js.LICENSE.txt": "/static/js/2.bbc9e1b2.chunk.js.LICENSE.txt",
     "static/media/PettingillCF-Bold.otf": "/static/media/PettingillCF-Bold.ffeb15ed.otf",
     "static/media/YanoneKaffeesatz-Bold.otf": "/static/media/YanoneKaffeesatz-Bold.13be9a83.otf",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.09b85ec0.js",
     "static/js/2.bbc9e1b2.chunk.js",
-    "static/css/main.2b42e405.chunk.css",
-    "static/js/main.00a62c29.chunk.js"
+    "static/css/main.9c9778bf.chunk.css",
+    "static/js/main.ec2147d8.chunk.js"
   ]
 }

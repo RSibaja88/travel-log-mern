@@ -25,6 +25,7 @@ const App = () => {
 
   const getEntries = async () => {
     const logEntries = await listEntries();
+    console.log(listEntries());
     setLogEntries(logEntries);
   };
 
