@@ -3,19 +3,25 @@ const morgan = require("morgan");
 const helmet = require("helmet");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-
-dotenv.config();
+require("dotenv").config();
 
 const middlewares = require("./middlewares");
 const logs = require("./api/logs");
 
 const app = express();
 
-mongoose.connect(process.env.MONGODB_URI || process.env.DATABASE_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose
+  .connect(process.env.MONGODB_URI || process.env.DATABASE_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  .then(() => {
+    console.log("conected to mongodb");
+  })
+  .catch((error) => {
+    console.log("mongo error", error);
+  });
 
 app.use(morgan("common"));
 app.use(helmet());
@@ -26,7 +32,7 @@ app.use(
 );
 app.use(express.json()); //body parsing mw
 
-if (process.env.NODE_ENV === "production") {
+if (process.env.NODE_ENV == "production") {
   app.use(express.static("client/build"));
 }
 
