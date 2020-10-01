@@ -25,6 +25,8 @@ router.get("/:logId", async (req, res) => {
   }
 });
 router.post("/", async (req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
   try {
     const logEntry = new LogEntry(req.body);
     const createdEntry = await logEntry.save();
