@@ -3,7 +3,7 @@ const LogEntry = require("../models/LogEntry");
 
 const router = Router();
 
-app.use((req, res, next) => {
+router.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   next();
 });
