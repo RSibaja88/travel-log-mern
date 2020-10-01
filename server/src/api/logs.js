@@ -5,6 +5,11 @@ const LogEntry = require("../models/LogEntry");
 
 const router = Router();
 
+router.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  next();
+});
+
 router.get("/", async (req, res, next) => {
   try {
     const entries = await LogEntry.find();
@@ -22,7 +27,6 @@ router.get("/:logId", async (req, res) => {
   }
 });
 router.post("/", async (req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
   try {
     const logEntry = new LogEntry(req.body);
     const createdEntry = await logEntry.save();
