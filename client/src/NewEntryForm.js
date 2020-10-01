@@ -5,7 +5,6 @@ import "./NewEntryForm.css";
 
 const NewEntryForm = ({ location, onClose }) => {
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
   const { register, handleSubmit } = useForm();
 
   const onSubmit = async (entry) => {
@@ -18,16 +17,12 @@ const NewEntryForm = ({ location, onClose }) => {
       onClose();
     } catch (error) {
       console.error(error);
-      setError(error.message);
       setLoading(false);
     }
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="entryForm">
-      {error ? <h3 className="erH3">Entry Failed: {error}</h3> : null}
-      <label htmlFor="apiKey">API Key: </label>
-      <input type="password" name="apiKey" required ref={register} />
       <label htmlFor="title">Location: </label>
       <input name="title" required ref={register} />
       <label htmlFor="description">About Visit: </label>

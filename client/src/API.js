@@ -8,15 +8,12 @@ export async function listEntries() {
 }
 
 export async function createEntry(entry) {
-  const apiKey = entry.apiKey;
-  delete entry.apiKey;
   const response = await fetch(
     "https://travel-mern-rss88.herokuapp.com/api/logs",
     {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        "X-API-KEY": apiKey,
       },
       body: JSON.stringify(entry),
     }
