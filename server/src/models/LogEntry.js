@@ -16,7 +16,6 @@ const requiredNumber = {
 const logEntrySchema = new Schema(
   {
     title: requiredString,
-    apiKey: requiredString,
     description: requiredString,
     comments: String,
     image: String,
