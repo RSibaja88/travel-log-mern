@@ -1,11 +1,9 @@
-//Router with multiple routes for interacting with our LogEntry store
-
 const { Router } = require("express");
 const LogEntry = require("../models/LogEntry");
 
 const router = Router();
 
-router.use((req, res, next) => {
+app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   next();
 });
